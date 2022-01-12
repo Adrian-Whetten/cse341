@@ -1,0 +1,24 @@
+{
+  "name": "cse341-npm",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon add.js",
+    "start-server": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Adrian-Whetten/cse341-node.git"
+  },
+  "author": "Adrian Whetten",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Adrian-Whetten/cse341-node/issues"
+  },
+  "homepage": "https://github.com/Adrian-Whetten/cse341-node#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
