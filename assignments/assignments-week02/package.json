@@ -1,6 +1,8 @@
 {
   "dependencies": {
     "express.js": "^1.0.0",
-    "nodemon": "^2.0.15"
+    "nodemon": "^2.0.15",
+    "start": "node app.js",
+    "start-server": "npm start"
   }
 }

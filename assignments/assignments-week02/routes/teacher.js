@@ -6,8 +6,8 @@ const rootDir = require('../util/path.js');
 
 const router = express.Router();
 
-router.get('/', (res, req, next) => {
-  res.sendfile(path.join(rootDir, 'views', 'teach.html'));
+router.get('/', (req, res, next) => {
+  res.sendfile(path.join(rootDir, 'views', 'teacher.html'));
 });
 
 module.exports = router;

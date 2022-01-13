@@ -11,8 +11,8 @@ const notFoundRoute = require('./routes/404.js');
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/rock', rockRoutes);
-app.use(teachRoutes);
-app.use(notFoundRoute);
+app.use('/users', rockRoutes);
+app.use('/', teachRoutes);
+//app.use(notFoundRoute);
 
 app.listen(5000);
