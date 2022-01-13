@@ -1,8 +1,18 @@
 {
   "dependencies": {
     "express.js": "^1.0.0",
-    "nodemon": "^2.0.15",
+    "nodemon": "^2.0.15"
+  },
+  "name": "assignments-week02",
+  "version": "1.0.0",
+  "main": "app.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node app.js",
-    "start-server": "npm start"
-  }
+    "start-server": "node app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
 }
