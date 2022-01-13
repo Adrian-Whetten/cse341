@@ -1,18 +1,13 @@
 {
-  "dependencies": {
-    "express.js": "^1.0.0",
-    "nodemon": "^2.0.15"
-  },
-  "name": "assignments-week02",
+  "name": "group-projects-week02",
   "version": "1.0.0",
+  "description": "",
   "main": "app.js",
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon app.js",
     "start-server": "node app.js"
   },
   "author": "",
-  "license": "ISC",
-  "description": ""
+  "license": "ISC"
 }
