@@ -9,7 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "heroku": "^7.59.2",
+    "heroku": "^7.33.3",
     "nodemon": "^2.0.15"
   }
 }
