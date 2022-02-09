@@ -66,13 +66,13 @@ app.use(authRoutes);
 app.use(errorController.get404);
 
 mongoose
-.connect(MONGODB_URI)
-.then(result => {
-  app.listen(PATH);
-})
-.catch(err => {
-  console.log(err);
-});
+  .connect(MONGODB_URI)
+  .then(result => {
+    app.listen(PATH);
+  })
+  .catch(err => {
+    console.log(err);
+  });
 const PATH = process.env.PORT || 5000;
 
   // app.use((req, res, next) => {
@@ -83,3 +83,5 @@ const PATH = process.env.PORT || 5000;
 //     })
 //     .catch(err => console.log(err));
 // });
+
+//sendgrid api = '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'
