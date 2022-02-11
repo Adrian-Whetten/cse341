@@ -1,4 +1,5 @@
 const path = require('path');
+const PORT = process.env.PORT || 5000;
 
 const express = require('express');
 const bodyParser = require('body-parser');
@@ -7,12 +8,14 @@ const session = require('express-session');
 const MongoDBStore = require('connect-mongodb-session')(session);
 const csrf = require('csurf');
 const flash = require('connect-flash');
+const cors = require('cors');
+const corsOptions = {origin: "https://<your_app_name>.herokuapp.com/", optionsSuccessStatus: 200}
 
 const errorController = require('./controllers/error');
 const User = require('./models/user');
 
-const MONGODB_URI =
-  'mongodb+srv://Moondawg32:Moondawg!!04@ecommerce.o3qob.mongodb.net/shop?retryWrites=true&w=majority';
+const MONGODB_URI = process.env.MONGODB_URI ||
+  'mongodb+srv://Moondawg32:Moondawg!!04@ecommerce.o3qob.mongodb.net/shop';
 
 const app = express();
 const store = new MongoDBStore({
@@ -28,6 +31,7 @@ const adminRoutes = require('./routes/admin');
 const shopRoutes = require('./routes/shop');
 const authRoutes = require('./routes/auth');
 
+app.use(cors(corsOptions));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(
@@ -86,12 +90,12 @@ app.use((error, req, res, next) => {
 mongoose
   .connect(MONGODB_URI)
   .then(result => {
-    app.listen(PATH);
+    app.listen(PORT);
   })
   .catch(err => {
     console.log(err);
   });
-const PATH = process.env.PORT || 5000;
+
 
   // app.use((req, res, next) => {
 //   User.findById('61fd8b47f5ce59f850571816')
